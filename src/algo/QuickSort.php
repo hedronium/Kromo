@@ -12,7 +12,7 @@ Class QuickSort {
 
 	public function sort( $input , callable $comparator ){
 
-
+			
 
 	}
 
