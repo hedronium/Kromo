@@ -10,9 +10,9 @@ Class QuickSort {
 
 	}
 
-	public function sort( $array , callable $comparator ){
+	public function sort( $input , callable $comparator ){
 
-			
+
 
 	}
 
