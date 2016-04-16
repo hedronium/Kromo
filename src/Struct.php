@@ -2,7 +2,7 @@
 
 namespace Hedronium\Kromo;
 
-abstract Class Struct {
+interface  Struct {
 
 
 	public function sort();
