@@ -2,9 +2,7 @@
 
 namespace Hedronium\Kromo\Algo;
 
-use Hedronium\Kromo;
-
-Class BubbleSort extends Struct {
+Class BubbleSort {
 
 	protected $input;
 
