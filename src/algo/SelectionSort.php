@@ -2,12 +2,14 @@
 
 namespace Hedronium\Kromo\Algo;
 
-Class SelectionSort {
+Class SelectionSort 
+{
 
 
 	protected $input;
 
-	public function sort($input , callable $comparator = null) {
+	public function sort($input , callable $comparator = null) 
+	{
 
 		$this->input = $input;
 		$output 	 = [];

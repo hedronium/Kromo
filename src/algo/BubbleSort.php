@@ -2,11 +2,13 @@
 
 namespace Hedronium\Kromo\Algo;
 
-Class BubbleSort {
+Class BubbleSort 
+{
 
 	protected $input;
 	
-	public function sort($input , callable $comparator = null) {
+	public function sort($input , callable $comparator = null) 
+	{
 
 		$length = count($input) - 2;
 		$this->input = $input;
