@@ -1,5 +1,6 @@
 <?php
 
+namespace Hedronium\Kromo;
 
 abstract Class Struct {
 

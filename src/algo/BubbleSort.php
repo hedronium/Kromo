@@ -1,11 +1,12 @@
 <?php
 
-namespace Hedronium\Kromo;
+namespace Hedronium\Kromo\Algo;
 
-Class BubbleSort {
+use Hedronium\Kromo;
+
+Class BubbleSort extends Struct {
 
 	protected $input;
-	protected $comparator;
 
 	public function sort($input , callable $comparator) {
 
@@ -28,7 +29,6 @@ Class BubbleSort {
 			}
 
 		} else {
-
 
 			for ( $i = 0;  $i <= $length; $i++) {
 
