@@ -1,9 +1,12 @@
 {
     "name": "hedronium/kromo",
-    "description": "Different sorting algorithms implemented in PHP",
+    "description": "Various sorting algorithms implemented in PHP.",
     "type": "library",
-    "keywords": ["sorting","sort algorightm","github","Kromo"],
+    "keywords": ["sorting", "sort", "algorithm"],
     "license": "MIT",
+    "require": {
+        "php": ">=5.4.0"
+    },
   	"autoload": {
         "psr-4": {
             "Hedronium\\Kromo\\": "src/"
