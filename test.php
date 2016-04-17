@@ -1,9 +1,10 @@
 <?php
+error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include 'src/algo/InsertationSort.php';
+include 'vendor/autoload.php';
 
-$array = [7,2,4,1,5,3];
-$class = new Hedronium\Kromo\Algo\InsertationSort;
+$array = [2,3238,345,25,6,634,5,6,3456,456,6,45,7,67,1];
 
-print_r($class->sort($array));
+$sorter = new Hedronium\Kromo\Sorters\SelectionSort;
+print_r($sorter->sort($array));
