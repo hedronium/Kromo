@@ -16,13 +16,8 @@ class InsertionSort extends Sorter
 		for ($i = 1; $i < $length; $i++) {
 			$checking = $input[$i];
 
-			for ($j = $i-1; $j > -1; $j--) {
-				if ($comparator($input[$j], $checking) > 0) {
-					$input[$j+1] = $input[$j];
-					continue;
-				}
-
-				break;
+			for ($j = $i-1; $j > -1 && $comparator($input[$j], $checking) > 0; $j--) {
+				$input[$j+1] = $input[$j];
 			}
 
 			$input[$j+1] = $checking;
