@@ -1,43 +1,31 @@
 <?php
 
-namespace Hedronium\Kromo\Algo;
+namespace Hedronium\Kromo\Sorters;
 
-Class BubbleSort 
+use Hedronium\Kromo\Sorter;
+
+class BubbleSort extends Sorter
 {
-
-	protected $input;
-	
-	public function sort($input , callable $comparator = null) 
+	public function sort(&$input , callable $comparator = null)
 	{
+		$comparator = static::getComparator($comparator);
+		$this->validateInput($input);
 
-		$length = count($input) - 2;
-		$this->input = $input;
+		$length = count($input) - 1;
 
+		for ($i = 0; $i < $length; $i++) {
+			$max = $length - $i;
 
-		 if (!is_callable($comparator)) {
+			for ($j = 0; $j < $max; $j++) {
+				if ($comparator($input[$j], $input[$j+1]) > 0) {
+					$temp = $input[$j];
 
-	 		$comparator = function ($a , $b) {
-
-	 			return $a - $b;
-	 		};
-		 }
-
-
-		  for ( $i = 0;  $i <= $length; $i++) {
-
-				for ($j = 0; $j <= $length; $j++) {
-
-						if ( $comparator($this->input[$j] , $this->input[$j+1]) > 0 ) {
-
-							$temp = $this->input[$j];
-							$this->input[$j] = $this->input[$j+1];
-							$this->input[$j+1] = $temp;
-						}
+					$input[$j] = $input[$j+1];
+					$input[$j+1] = $temp;
 				}
 			}
+		}
 
-		return $this->input;
-
+		return $input;
 	}
-	
 }
