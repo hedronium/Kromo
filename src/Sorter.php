@@ -34,4 +34,5 @@ abstract class Sorter implements SorterInterface
 
 		return true;
 	}
+	
 }

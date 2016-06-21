@@ -1,8 +1,9 @@
 <?php
 
-namespace Hedronium\Kromo\Algo;
+namespace Hedronium\Kromo\Sorters;
+use Hedronium\Kromo\Sorter as Sorter;
 
-Class CombSort
+Class CombSort extends Sorter
 {
 
 	protected $input;
