@@ -14,9 +14,14 @@ Class InsertationSort
 
 		if(!is_callable($comparator)) {
 
-			$comparator = function ($a , $b) {
-				return $a - $b;
-			};
+				$comparator = function (&$a, &$b) {
+					 
+					 if ($a == $b) {
+					    return 0;
+					  }
+
+					  return $a > $b ? 1 : -1;
+					};
 		}
 
 		for ($i = 1; $i <= $length; $i++) {

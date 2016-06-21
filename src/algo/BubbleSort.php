@@ -15,11 +15,15 @@ Class BubbleSort
 
 
 		 if (!is_callable($comparator)) {
+		
+				$comparator = function (&$a, &$b) {
+					 
+					 if ($a == $b) {
+					    return 0;
+					  }
 
-	 		$comparator = function ($a , $b) {
-
-	 			return $a - $b;
-	 		};
+					  return $a > $b ? 1 : -1;
+					};
 		 }
 
 

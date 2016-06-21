@@ -7,6 +7,7 @@ Class SelectionSort
 
 
 	protected $input;
+	protected static $comparator;
 
 	public function sort($input , callable $comparator = null) 
 	{
@@ -18,10 +19,15 @@ Class SelectionSort
 
 		if (!is_callable($comparator)) {
 
-			$comparator = function ($a , $b){
-				return $b - $a;
-			};
-		}
+			$comparator = function (&$a, &$b) {
+				 
+				 if ($a == $b) {
+				    return 0;
+				  }
+
+				  return $a > $b ? 1 : -1;
+				};
+		 }
 
 		for ($i = 0; $i <= $length; $i++) {
 			
