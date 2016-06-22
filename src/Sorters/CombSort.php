@@ -8,23 +8,14 @@ Class CombSort extends Sorter
 
 	protected $input;
 
-	public function sort($input, callable $comparator = null)
+	public function sort(&$input, callable $comparator = null)
 	{
 
 		$length = count($input);
 		$this->input = $input;
 
-			if (!is_callable($comparator)) {
-
-				$comparator = function (&$a, &$b) {
-					 
-					 if ($a == $b) {
-					    return 0;
-					  }
-
-					  return $a < $b ? 1 : -1;
-					};
-			 }
+		$comparator = static::getComparator($comparator);
+		$this->validateInput($this->input);
 
 		$gap = (int)($length / 1.3);
 			
