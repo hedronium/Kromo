@@ -39,7 +39,7 @@ Class CocktailSort extends Sorter {
 				}
 
 
-
+				// sort 2
 
 				for ($i=$length; $i > 0; $i--) {
 					# code...
@@ -53,13 +53,11 @@ Class CocktailSort extends Sorter {
 
 					}
 
-
 				}
 				
 		}
 
 		return $this->input;
 	}
-
 
 }
